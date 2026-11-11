@@ -1,5 +1,7 @@
 import logo from '../images/logo.png'
 import data from '../data/index.js'
+import Flashcard from './Flashcard.jsx';
+
 export default function PlayScreen() {
     
     const deck = [];
@@ -18,10 +20,10 @@ export default function PlayScreen() {
         <div className="main">
             <div className="header">
                 <img src={logo} alt="logo" />
-                <h1>Zap Recall</h1>
+                <h1>ZapRecall</h1>
             </div>
             <div className="deck">
-                {deck.map((value, index) => `Pergunta ${index+1}`)}
+                {deck.map((value, index) => < Flashcard answer={value.answer} question={value.question} key={index} index={index}/>)}
             </div>
         </div>
     );
