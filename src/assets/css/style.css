@@ -82,8 +82,8 @@ body {
 }
 
 .deck img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 
 .flashcard {
@@ -92,6 +92,7 @@ body {
     width: 500px;
     height: 80px;
     border-radius: 5px;
+    padding: 20px;
     font-size: 20px;
     font-family: "Righteous";
     color: #333333;
@@ -104,4 +105,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.face-up {
+    height: 160px;
+    background-color: #FFFFD4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.face-up img {
+    align-self: flex-end;
 }
