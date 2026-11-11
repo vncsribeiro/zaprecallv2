@@ -3,7 +3,7 @@ import { useState } from 'react';
 import PlayScreen from './assets/components/PlayScreen';
 
 export default function App() {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   return (
     <>

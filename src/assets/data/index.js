@@ -8,3 +8,5 @@ const data = [
     { question: 'Usamos props para __', answer: 'passar diferentes informações para componentes ' },
     { question: 'Usamos estado (state) para __', answer: 'dizer para o React quais informações quando atualizadas devem renderizar a tela novamente' }
 ]
+
+export default data;
