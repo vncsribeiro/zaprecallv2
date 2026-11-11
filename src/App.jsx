@@ -9,7 +9,6 @@ export default function App() {
         <img src={logo} alt="logo" />
         <h1>ZapRecall</h1>
         <button>Iniciar Recall!</button>
-      
     </div>
   )
 }
