@@ -118,3 +118,43 @@ body {
 .face-up img {
     align-self: flex-end;
 }
+
+.cards-answers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-family: 'Recursive', cursive;
+    color: white;
+    
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #FF3030;
+    height: 60px;
+    width: 140px;
+}
+
+.almost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    height: 60px;
+    width: 140px;
+    background-color: #FF922E;
+}
+
+.zap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    height: 60px;
+    width: 140px;
+    background-color: #2EBE34;
+}
