@@ -97,7 +97,7 @@ body {
     font-family: "Righteous";
     color: #333333;
     margin: 6px;
-    cursor: pointer;
+
     flex-shrink: 0;
 }
 
@@ -105,6 +105,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.face-down img {
+    cursor: pointer;
 }
 
 .face-up {
@@ -117,6 +121,7 @@ body {
 
 .face-up img {
     align-self: flex-end;
+    cursor: pointer;
 }
 
 .cards-answers {
@@ -137,6 +142,7 @@ body {
     background-color: #FF3030;
     height: 60px;
     width: 140px;
+    cursor: pointer;
 }
 
 .almost {
@@ -147,6 +153,7 @@ body {
     height: 60px;
     width: 140px;
     background-color: #FF922E;
+    cursor: pointer;
 }
 
 .zap {
@@ -157,4 +164,9 @@ body {
     height: 60px;
     width: 140px;
     background-color: #2EBE34;
+    cursor: pointer;
+}
+
+.finished {
+    text-decoration: line-through;
 }

@@ -5,16 +5,30 @@ import { useState } from "react";
 
 export default function Flashcard({ question, answer, index }) {
     const [status, setStatus] = useState('closed');  // STATUS: 'closed','question','answer', 'finished'
+    const [result, setResult] = useState(null); 
+
+    function handleResult(chosenAnswer) {
+        setStatus('finished');
+        setResult(chosenAnswer);
+    } 
 
     if (status === 'closed') {
         return (
-            <div className="flashcard face-down" onClick={() => setStatus('question')}>
+            <div className="flashcard face-down" >
                 <h1>{`Pergunta ${index + 1}`}</h1>
-                <img src={playButton} alt="play-button" />
+                <img src={playButton} alt="play-button" onClick={() => setStatus('question')}/>
             </div>
         );
     }
     
+    if(status === 'finished') {
+         return (
+            <div className="flashcard face-down finished" >
+                <h1>{`Pergunta ${index + 1}`}</h1>
+            </div>
+        );
+    }
+
     return (
         
         <>
@@ -26,9 +40,9 @@ export default function Flashcard({ question, answer, index }) {
                 (<div className="flashcard face-up">
                     <h1>{answer}</h1>
                     <div className="cards-answers">
-                        <div className="error">Não lembrei</div>
-                        <div className="almost">Quase não lembrei</div>
-                        <div className="zap">Zap!</div>
+                        <div className="error" onClick={() => handleResult('Não lembrei')}>Não lembrei</div>
+                        <div className="almost" onClick={() => handleResult('Quase não lembrei')}>Quase não lembrei</div>
+                        <div className="zap" onClick={() => handleResult('Zap!')}>Zap!</div>
                     </div>
                 </div>)
             }
