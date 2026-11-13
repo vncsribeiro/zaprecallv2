@@ -1,3 +1,4 @@
+
 export default function Sidebar({ questions, myAnswers }) {
 
      function iconSelect(type) {
@@ -11,8 +12,20 @@ export default function Sidebar({ questions, myAnswers }) {
         }
     }
 
+   function showMyResult () {
+    const showTime = myAnswers.find((element) => element === 'error')
+    if(showTime) {
+        return 'Putzzz!!! Melhore...'
+    }
+    return 'Parabéns, amigo!!!'
+   } 
+    
+
     return (
         <div className="sidebar">
+            <div>
+                {myAnswers.length === questions.length ? (showMyResult()) : ('') } 
+            </div>
             <h1>{myAnswers.length}/{questions.length} CONCLUÍDOS</h1>
             <div>
                 {myAnswers.map(value => (
