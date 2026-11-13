@@ -6,6 +6,11 @@ import {useState} from 'react';
 
 export default function PlayScreen() {
     const [myAnswers, setMyAnswers] = useState([]);
+    const configResult = {
+        error: { class: 'result-error', icon: <ion-icon name="close-circle"></ion-icon> },
+        almost: { class: 'result-almost', icon: <ion-icon name="checkmark-circle"></ion-icon> },
+        zap: { class: 'result-zap', icon: <ion-icon name="checkmark-circle"></ion-icon> }
+    }
     const deck = [];
 
     function createDeck() {
@@ -17,6 +22,7 @@ export default function PlayScreen() {
     }
     
     createDeck();
+   
     
     function whenAnswered (chosenAnswer) {
         setMyAnswers([...myAnswers, chosenAnswer]);
@@ -35,9 +41,12 @@ export default function PlayScreen() {
                 key={index} 
                 index={index} 
                 whenAnswered={whenAnswered}
+                configResult={configResult}
                 />)}
             </div>
-            <Sidebar questions={deck} myAnswers={myAnswers}/>
+            <Sidebar questions={deck} 
+            myAnswers={myAnswers} 
+            />
             
         </div>
     );

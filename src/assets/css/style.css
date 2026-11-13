@@ -186,3 +186,18 @@ ion-icon {
     color: #2EBE34;
 }
 
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    height: 100px;
+    width: 100vw;
+    font-size: 18px;
+    font-family: 'Recursive', cursive;
+    color: black;
+    background-color: white;
+    gap: 5px;
+}

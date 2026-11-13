@@ -3,25 +3,20 @@ import playButton from "../images/play-outline.svg"
 import setinha from '../images/setinha.png'
 import { useState } from "react";
 
-export default function Flashcard({ question, answer, index, whenAnswered }) {
+export default function Flashcard({ question, answer, index, whenAnswered, configResult }) {
     const [status, setStatus] = useState('closed');  // STATUS: 'closed','question','answer', 'finished'
     const [result, setResult] = useState(null);
-    const configResult = {
-        error: { class: 'result-error', icon: <ion-icon name="close-circle"></ion-icon> },
-        almost: { class: 'result-almost', icon: <ion-icon name="checkmark-circle"></ion-icon> },
-        zap: { class: 'result-zap', icon: <ion-icon name="checkmark-circle"></ion-icon> }
-    }
 
 
     function handleResult(chosenAnswer) {
         setStatus('finished');
         setResult(chosenAnswer);
 
-        if(whenAnswered) {
+        if (whenAnswered) {
             whenAnswered(chosenAnswer);
-            
+
         }
-            
+
     }
 
     if (status === 'closed') {
