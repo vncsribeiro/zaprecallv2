@@ -15,7 +15,9 @@ export default function PlayScreen() {
     }
     
     createDeck();
-        
+    
+    
+
     return (
         <div className="main">
             <div className="header">

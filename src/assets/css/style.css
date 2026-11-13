@@ -167,6 +167,17 @@ body {
     cursor: pointer;
 }
 
-.finished {
+.result-error {
     text-decoration: line-through;
+    color: #FF3030;
+}
+
+.result-almost {
+    text-decoration: line-through;
+    color: #FF922E;
+}
+
+.result-zap {
+    text-decoration: line-through;
+    color: #2EBE34;
 }
