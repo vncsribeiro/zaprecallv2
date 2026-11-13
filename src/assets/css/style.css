@@ -97,8 +97,12 @@ body {
     font-family: "Righteous";
     color: #333333;
     margin: 6px;
-
     flex-shrink: 0;
+}
+
+ion-icon {
+    width: 30px;
+    height: 30px;
 }
 
 .face-down {
@@ -181,3 +185,4 @@ body {
     text-decoration: line-through;
     color: #2EBE34;
 }
+
